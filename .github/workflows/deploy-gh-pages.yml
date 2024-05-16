@@ -27,7 +27,7 @@ jobs:
 
     - name: Deploy
       run: |
-        git remote set-url origin https://yichiang:$token@github.com/yichiang/plain-language-checker
+        git remote set-url origin https://yicccccc:$token@github.com/yichiang/yi-test
         git config --global user.email "yi_chiang@outlook.com"
         git config --global user.name "Yi"
         yarn run deploy
