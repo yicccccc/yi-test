@@ -4,7 +4,8 @@ on:
   push:
     branches: [ "master", "main", "test-deployment" ]
 env: 
- token: ${{ secrets.TOKEN }}
+ # token: ${{ secrets.TOKEN }}
+ token: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest
