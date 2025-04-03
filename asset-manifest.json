@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yi-test/static/css/main.9d64c926.css",
-    "main.js": "/yi-test/static/js/main.729a01c1.js",
+    "main.js": "/yi-test/static/js/main.4ee2d713.js",
     "static/media/IBMPlexSerif-SemiBoldItalic-Cyrillic.woff": "/yi-test/static/media/IBMPlexSerif-SemiBoldItalic-Cyrillic.d96e5a614e96c351c453.woff",
     "static/media/IBMPlexSerif-SemiBoldItalic-Latin1.woff": "/yi-test/static/media/IBMPlexSerif-SemiBoldItalic-Latin1.b691d8c0c5110ea3659e.woff",
     "static/media/IBMPlexSerif-Italic-Cyrillic.woff": "/yi-test/static/media/IBMPlexSerif-Italic-Cyrillic.452cc78a1baf50168631.woff",
@@ -184,10 +184,10 @@
     "static/media/IBMPlexMono-Regular-Latin3.woff2": "/yi-test/static/media/IBMPlexMono-Regular-Latin3.cacfd1d7dbd14067b970.woff2",
     "index.html": "/yi-test/index.html",
     "main.9d64c926.css.map": "/yi-test/static/css/main.9d64c926.css.map",
-    "main.729a01c1.js.map": "/yi-test/static/js/main.729a01c1.js.map"
+    "main.4ee2d713.js.map": "/yi-test/static/js/main.4ee2d713.js.map"
   },
   "entrypoints": [
     "static/css/main.9d64c926.css",
-    "static/js/main.729a01c1.js"
+    "static/js/main.4ee2d713.js"
   ]
 }
