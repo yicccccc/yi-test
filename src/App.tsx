@@ -15,6 +15,8 @@ function App(): JSX.Element {
 	const [showResult, setShowResult] = useState<boolean>(false);
 
 	const onClickSubmit = (article: string) => {
+		window.uetq = window.uetq || [];
+     		window.uetq.push('event', 'purchase', {"event_label":"purchase_label","event_value":14,"event_category":"purchase_category","revenue_value":Replace_with_Variable_Revenue_Function(),"currency":"USD"});
 		setShowResult(true);
 		const parsedText = new Text(article);
 
