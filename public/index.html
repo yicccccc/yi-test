@@ -39,6 +39,8 @@
     window.uetq.push('consent', 'update', {
         'ad_storage': 'granted'
         });
+          window.uetq.push('event', 'request_quote', {"revenue_value":Replace_with_Variable_Revenue_Function(),"currency":"USD"});
+     window.uetq.push('event', 'signup', {"revenue_value":Replace_with_Variable_Revenue_Function(),"currency":"USD"});
     window.uetq.push ('event', '', {'ecomm_prodid': '12345678', 'ecomm_pagetype': 'cart'});
     window.uetq.push("event", "other", {});
  gtag('event', 'add-to-cart', {
