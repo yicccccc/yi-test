@@ -3,10 +3,11 @@ import './App.scss';
 import Checker from './Components/Main/Checker';
 import { FeedbackData, GeneralFeedbackData } from './Types';
 import { Text } from './Parser/Parser';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import ReportPanelList from './Components/Main/ReportPanelList';
 import GeneralCommentsList from './Components/Main/GeneralCommentsList';
 import { validateAbbreviationsCount, validateExampleCount, validateTransitionWordsCount } from './Parser/Validator/WordCounterValidator';
+import BundleTimingChart from './Components/Main/BundleTimingChart';
 
 function App(): JSX.Element {
 	const [specificFeedbackList, setSpecificFeedbackList] = useState<FeedbackData[]>([]);
@@ -39,22 +40,30 @@ function App(): JSX.Element {
 	return (
 		<div className="App">
 			<div className='container'>
+				<nav style={{ marginBottom: '1rem' }}>
+					<Link to="/" style={{ marginRight: '1rem' }}>Plain Language Checker</Link>
+					<Link to="/bundle-timing">Bundle Timing Chart</Link>
+				</nav>
 				<Switch>
-					<Route exact path="/"/>
+					<Route exact path="/">
+						<div role={'main'}>
+							<Checker
+								onClickSubmit={onClickSubmit}
+							/>
+							{
+								showResult && specificFeedbackList &&
+							<ReportPanelList
+								items={specificFeedbackList}
+								paragraphs={parsedTextState?.getParagraphs()}
+							/>
+							}
+							{showResult && generalFeedbackList && <GeneralCommentsList items={generalFeedbackList}/>}
+						</div>
+					</Route>
+					<Route path="/bundle-timing">
+						<BundleTimingChart />
+					</Route>
 				</Switch>
-				<div role={'main'}>
-					<Checker
-						onClickSubmit={onClickSubmit}
-					/>
-					{
-						showResult && specificFeedbackList &&
-					<ReportPanelList
-						items={specificFeedbackList}
-						paragraphs={parsedTextState?.getParagraphs()}
-					/>
-					}
-					{showResult && generalFeedbackList && <GeneralCommentsList items={generalFeedbackList}/>}
-				</div>
 			</div>
 		</div>
 	);
